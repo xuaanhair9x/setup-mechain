@@ -28,8 +28,8 @@ services:
       - "--mine"
       - "--password=/datadir/password.txt"
       - "--allow-insecure-unlock"
-      - "--unlock=0x64855083Dd5fB9dA75E52048de58cf39375db323"
-      - "--miner.etherbase=0x64855083Dd5fB9dA75E52048de58cf39375db323"
+      - "--unlock=0x8b35fc961a9c750C38d4aa2B812017719ddc8422"
+      - "--miner.etherbase=0x8b35fc961a9c750C38d4aa2B812017719ddc8422"
       - "--bootnodes=enode://5c8e90050fabb7e14e4921dc107caf533140112245e7a231d0edc49861cd779760ad4804e7034952a5cc79422fa9d31c54e9a6141fb4995af7a6bfce7a39140f@host.docker.internal:30303"
       - "--gcmode=archive"
       - "--syncmode=full"
@@ -37,7 +37,7 @@ services:
     volumes:
       - "./genesis.json:/datadir/genesis.json"
       - "./genesis/keystore:/datadir/keystore"
-      - "./genesis/password_1.txt:/datadir/password.txt"
+      - "./genesis/password.txt:/datadir/password.txt"
       - "./datadir/validator_1:/datadir/geth"
     extra_hosts:
       - 'host.docker.internal:host-gateway'
@@ -51,8 +51,8 @@ services:
       - "--mine"
       - "--password=/datadir/password.txt"
       - "--allow-insecure-unlock"
-      - "--unlock=0xF999517074220D5b40f00868808Fa8F6D41E0d07"
-      - "--miner.etherbase=0xF999517074220D5b40f00868808Fa8F6D41E0d07"
+      - "--unlock=0x83bd4eeC405151c656C70322225cD973843cFAA6"
+      - "--miner.etherbase=0x83bd4eeC405151c656C70322225cD973843cFAA6"
       - "--bootnodes=enode://5c8e90050fabb7e14e4921dc107caf533140112245e7a231d0edc49861cd779760ad4804e7034952a5cc79422fa9d31c54e9a6141fb4995af7a6bfce7a39140f@host.docker.internal:30303"
       - "--gcmode=archive"
       - "--syncmode=full"
@@ -60,7 +60,7 @@ services:
     volumes:
       - "./genesis.json:/datadir/genesis.json"
       - "./genesis/keystore:/datadir/keystore"
-      - "./genesis/password_2.txt:/datadir/password.txt"
+      - "./genesis/password.txt:/datadir/password.txt"
       - "./datadir/validator_2:/datadir/geth"
     extra_hosts:
       - 'host.docker.internal:host-gateway'
@@ -74,8 +74,8 @@ services:
       - "--mine"
       - "--password=/datadir/password.txt"
       - "--allow-insecure-unlock"
-      - "--unlock=0xc2f06F9e3A448343FF1368Ef79AADe853786f749"
-      - "--miner.etherbase=0xc2f06F9e3A448343FF1368Ef79AADe853786f749"
+      - "--unlock=0x8e4bc827E0Fd3a14661De81e167A75f52D576326"
+      - "--miner.etherbase=0x8e4bc827E0Fd3a14661De81e167A75f52D576326"
       - "--bootnodes=enode://5c8e90050fabb7e14e4921dc107caf533140112245e7a231d0edc49861cd779760ad4804e7034952a5cc79422fa9d31c54e9a6141fb4995af7a6bfce7a39140f@host.docker.internal:30303"
       - "--gcmode=archive"
       - "--syncmode=full"
@@ -85,7 +85,7 @@ services:
     volumes:
       - "./genesis.json:/datadir/genesis.json"
       - "./genesis/keystore:/datadir/keystore"
-      - "./genesis/password_3.txt:/datadir/password.txt"
+      - "./genesis/password.txt:/datadir/password.txt"
       - "./datadir/validator_3:/datadir/geth"
     restart: always
 
@@ -98,8 +98,8 @@ services:
       - "--mine"
       - "--password=/datadir/password.txt"
       - "--allow-insecure-unlock"
-      - "--unlock=0x6f747ced950C29628d01CA2484868aE2A9fC0bDf"
-      - "--miner.etherbase=0x6f747ced950C29628d01CA2484868aE2A9fC0bDf"
+      - "--unlock=0x2d5F6D6dF3F5c3C633a378E6eDEcd7caAd8Af6c2"
+      - "--miner.etherbase=0x2d5F6D6dF3F5c3C633a378E6eDEcd7caAd8Af6c2"
       - "--bootnodes=enode://5c8e90050fabb7e14e4921dc107caf533140112245e7a231d0edc49861cd779760ad4804e7034952a5cc79422fa9d31c54e9a6141fb4995af7a6bfce7a39140f@host.docker.internal:30303"
       - "--gcmode=archive"
       - "--syncmode=full"
@@ -109,7 +109,7 @@ services:
     volumes:
       - "./genesis.json:/datadir/genesis.json"
       - "./genesis/keystore:/datadir/keystore"
-      - "./genesis/password_4.txt:/datadir/password.txt"
+      - "./genesis/password.txt:/datadir/password.txt"
       - "./datadir/validator_4:/datadir/geth"
     restart: always
 
@@ -122,8 +122,8 @@ services:
       - "--mine"
       - "--password=/datadir/password.txt"
       - "--allow-insecure-unlock"
-      - "--unlock=0x1aeD895139d8a4B0e018482F31fC39a1b95bF365"
-      - "--miner.etherbase=0x1aeD895139d8a4B0e018482F31fC39a1b95bF365"
+      - "--unlock=0xcaB196c1f3aa34135c721a14dACcCd9e21B365F5"
+      - "--miner.etherbase=0xcaB196c1f3aa34135c721a14dACcCd9e21B365F5"
       - "--bootnodes=enode://5c8e90050fabb7e14e4921dc107caf533140112245e7a231d0edc49861cd779760ad4804e7034952a5cc79422fa9d31c54e9a6141fb4995af7a6bfce7a39140f@host.docker.internal:30303"
       - "--gcmode=archive"
       - "--syncmode=full"
@@ -133,7 +133,7 @@ services:
     volumes:
       - "./genesis.json:/datadir/genesis.json"
       - "./genesis/keystore:/datadir/keystore"
-      - "./genesis/password_5.txt:/datadir/password.txt"
+      - "./genesis/password.txt:/datadir/password.txt"
       - "./datadir/validator_5:/datadir/geth"
     restart: always
 
@@ -146,8 +146,8 @@ services:
       - "--mine"
       - "--password=/datadir/password.txt"
       - "--allow-insecure-unlock"
-      - "--unlock=0xabF2c228fC27D23C559a9A9Ca4F73A7c0CED6d69"
-      - "--miner.etherbase=0xabF2c228fC27D23C559a9A9Ca4F73A7c0CED6d69"
+      - "--unlock=0x4A17627020187c79f4fDe05D3e1cEea0A570e8B9"
+      - "--miner.etherbase=0x4A17627020187c79f4fDe05D3e1cEea0A570e8B9"
       - "--bootnodes=enode://5c8e90050fabb7e14e4921dc107caf533140112245e7a231d0edc49861cd779760ad4804e7034952a5cc79422fa9d31c54e9a6141fb4995af7a6bfce7a39140f@host.docker.internal:30303"
       - "--gcmode=archive"
       - "--syncmode=full"
@@ -157,7 +157,7 @@ services:
     volumes:
       - "./genesis.json:/datadir/genesis.json"
       - "./genesis/keystore:/datadir/keystore"
-      - "./genesis/password_6.txt:/datadir/password.txt"
+      - "./genesis/password.txt:/datadir/password.txt"
       - "./datadir/validator_6:/datadir/geth"
     restart: always
 
@@ -170,8 +170,8 @@ services:
       - "--mine"
       - "--password=/datadir/password.txt"
       - "--allow-insecure-unlock"
-      - "--unlock=0x5c454E33FD32edAD4BB68ACF84ed2b6e590452D7"
-      - "--miner.etherbase=0x5c454E33FD32edAD4BB68ACF84ed2b6e590452D7"
+      - "--unlock=0x0510C493b1C14822039B8F75Af18CF9DB7c4F415"
+      - "--miner.etherbase=0x0510C493b1C14822039B8F75Af18CF9DB7c4F415"
       - "--bootnodes=enode://5c8e90050fabb7e14e4921dc107caf533140112245e7a231d0edc49861cd779760ad4804e7034952a5cc79422fa9d31c54e9a6141fb4995af7a6bfce7a39140f@host.docker.internal:30303"
       - "--gcmode=archive"
       - "--syncmode=full"
@@ -181,7 +181,7 @@ services:
     volumes:
       - "./genesis.json:/datadir/genesis.json"
       - "./genesis/keystore:/datadir/keystore"
-      - "./genesis/password_7.txt:/datadir/password.txt"
+      - "./genesis/password.txt:/datadir/password.txt"
       - "./datadir/validator_7:/datadir/geth"
     restart: always
 
