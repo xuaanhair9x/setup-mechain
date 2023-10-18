@@ -1,9 +1,9 @@
 #!/bin/bash
-[ ! -d "/root/.acme.sh/rpc.${DOMAIN_NAME}" ] && ~/.acme.sh/acme.sh --issue --standalone \
-  -d rpc.${DOMAIN_NAME} \
-  -d blockscout.${DOMAIN_NAME} \
-  -d genesis-config.${DOMAIN_NAME} \
-  -d config.${DOMAIN_NAME} \
-  -d explorer.${DOMAIN_NAME} \
-  -d staking.${DOMAIN_NAME} \
-  -d faucet.${DOMAIN_NAME} || true
+[ ! -d "/root/.acme.sh/rpc.mechain.network" ] && ~/.acme.sh/acme.sh --issue --standalone \
+  -d rpc.mechain.network \
+  -d blockscout.mechain.network \
+  -d genesis-config.mechain.network \
+  -d config.mechain.network \
+  -d explorer.mechain.network \
+  -d staking.mechain.network \
+  -d faucet.mechain.network || true

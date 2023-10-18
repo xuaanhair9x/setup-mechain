@@ -229,9 +229,9 @@ services:
       - "--account.pass=/datadir/password.txt"
       - "--rpcapi=ws://host.docker.internal:8546"
       - "--noauth=true"
-      - "--faucet.name=BAS"
+      - "--faucet.name=MES"
       - "--faucet.amount=10"
-      - "--faucet.tiers=5"
+      - "--faucet.tiers=2"
     ports:
       - "3000:8080"
     volumes:
@@ -255,18 +255,18 @@ services:
     environment:
       REACT_APP_ENVIRONMENT: "env"
       CHAIN_ID: "${CHAIN_ID}"
-      CHAIN_NAME: "BAS devnet"
-      CHAIN_RPC: "https://rpc.${DOMAIN_NAME}"
-      EXPLORER_HOME_URL: "https://explorer.${DOMAIN_NAME}/"
-      EXPLORER_TX_URL: "https://explorer.${DOMAIN_NAME}/tx/{tx}"
-      EXPLORER_ADDRESS_URL: "https://explorer.${DOMAIN_NAME}/address/{address}"
-      EXPLORER_BLOCK_URL: "https://explorer.${DOMAIN_NAME}/block/{block}"
+      CHAIN_NAME: "MES devnet"
+      CHAIN_RPC: "https://testnet-rpc.${DOMAIN_NAME}"
+      EXPLORER_HOME_URL: "https://testnet.${DOMAIN_NAME}/"
+      EXPLORER_TX_URL: "https://testnet.${DOMAIN_NAME}/tx/{tx}"
+      EXPLORER_ADDRESS_URL: "https://testnet.${DOMAIN_NAME}/address/{address}"
+      EXPLORER_BLOCK_URL: "https://testnet.${DOMAIN_NAME}/block/{block}"
       # new env
-      REACT_APP_API_ENDPOINT: "https://rpc.${DOMAIN_NAME}"
+      REACT_APP_API_ENDPOINT: "https://testnet-rpc.${DOMAIN_NAME}"
       REACT_APP_DEFAULT_NETWORK: "default"
       REACT_APP_CHAIN_ID: "${CHAIN_ID}"
-      REACT_APP_EXPLORER_URL: "https://explorer.${DOMAIN_NAME}/"
-      REACT_APP_CHAIN_NAME: "BAS devnet #${CHAIN_ID}"
+      REACT_APP_EXPLORER_URL: "https://testnet.${DOMAIN_NAME}/"
+      REACT_APP_CHAIN_NAME: "MES devnet #${CHAIN_ID}"
     extra_hosts:
       - 'host.docker.internal:host-gateway'
     ports:
@@ -322,7 +322,7 @@ services:
   blockscout-gateway:
     depends_on:
       - blockscout
-    image: ankrnetwork/sidechain-explorer:v0.0.6
+    image: ankrnetwork/sidechain-explorer:latest
     extra_hosts:
       - 'host.docker.internal:host-gateway'
     environment:

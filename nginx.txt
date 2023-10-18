@@ -1,0 +1,48 @@
+    map $host $host_upstream_mapped {
+        hostnames;
+
+        rpc.mechain.network rpc:8545;
+        blockscout.mechain.network blockscout:4000;
+        explorer.mechain.network blockscout-gateway:9000;
+        staking.mechain.network staking-ui;
+        genesis-config.mechain.network genesis-config:8080;
+        config.mechain.network config-ui;
+        faucet.mechain.network faucet:8080;
+    }
+
+    server {
+        listen 80;
+        server_name testnet-rpc.mechain.network;
+        location / {
+            proxy_pass http://rpc:8545;
+        } 
+    }
+
+    server {
+        listen 80;
+        server_name faucet.mechain.network;
+        access_log  /var/log/nginx/faucet.access.log  main;
+        location / {
+            proxy_pass http://faucet:8080;
+            proxy_http_version 1.1;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection "Upgrade";	   
+        }	
+    }
+    server {
+    	listen 80;
+        server_name testnet.mechain.network;
+        location / {
+            proxy_pass http://blockscout:4000;
+            proxy_http_version 1.1;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection "Upgrade";	   
+        }
+    }
+    server {
+    	listen 80;
+        server_name explorer.mechain.network;
+        location / {
+            proxy_pass http://staking-ui;	
+        }
+    }
