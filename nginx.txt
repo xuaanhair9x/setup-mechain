@@ -41,7 +41,7 @@
     }
     server {
     	listen 80;
-        server_name explorer.mechain.network;
+        server_name mechain.network;
         location / {
             proxy_pass http://staking-ui;	
         }
