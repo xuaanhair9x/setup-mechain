@@ -309,8 +309,13 @@ services:
       ETHEREUM_JSONRPC_HTTP_URL: "http://host.docker.internal:8545/"
       DATABASE_URL: "postgresql://postgres:@host.docker.internal:7432/blockscout?ssl=false"
       ECTO_USE_SSL: "false"
+      SUBNETWORK: "MeChain"
+      NETWORK: ""
+      BLOCKSCOUT_VERSION: "1.1.1"
+      RELEASE_LINK: "1.1.2"
+      
     volumes:
-      - './blockscout:/opt/app'
+      - './asset:/apps/block_scout_web/assets/static/images_mechain'
     ports:
       - "4000:4000"
   blockscout-redis:
