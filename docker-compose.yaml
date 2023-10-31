@@ -313,9 +313,9 @@ services:
       NETWORK: ""
       BLOCKSCOUT_VERSION: "1.1.1"
       RELEASE_LINK: "1.1.2"
-      
+
     volumes:
-      - './asset:/apps/block_scout_web/assets/static/images_mechain'
+      - './asset:/opt/app/apps/block_scout_web/assets/static/images_mechain'
     ports:
       - "4000:4000"
   blockscout-redis:
