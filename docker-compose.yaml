@@ -313,11 +313,12 @@ services:
       NETWORK: ""
       BLOCKSCOUT_VERSION: "1.1.1"
       RELEASE_LINK: "1.1.2"
-      FOOTER_LOGO: "/images_mechain/logo.png"
-      LOGO: "/images_mechain/logo.png"
+      FOOTER_LOGO: "images/images_mechain/logo.png"
+      LOGO: "images/images_mechain/logo.png"
+      FOOTER_CHAT_LINK: ""
 
     volumes:
-      - './asset:/opt/app/apps/block_scout_web/assets/static/images_mechain'
+      - './asset:/opt/app/apps/block_scout_web/assets/static/images/images_mechain'
     ports:
       - "4000:4000"
   blockscout-redis:
