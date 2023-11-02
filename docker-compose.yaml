@@ -316,9 +316,8 @@ services:
       FOOTER_LOGO: "/images/images_mechain/logo.png"
       LOGO: "/images/images_mechain/logo.png"
       FOOTER_CHAT_LINK: ""
-
     volumes:
-      - './blockscout/apps/block_scout_web:/opt/app/apps/block_scout_web'
+      - './../blockscout:/opt/app'
     ports:
       - "4000:4000"
   blockscout-redis:
