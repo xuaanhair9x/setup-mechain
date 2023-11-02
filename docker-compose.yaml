@@ -318,8 +318,7 @@ services:
       FOOTER_CHAT_LINK: ""
 
     volumes:
-      - './asset:/opt/app/apps/block_scout_web/assets/static/images/images_mechain'
-      - './blockscout/apps/block_scout_web: /opt/app/apps/block_scout_web'
+      - './blockscout/apps/block_scout_web:/opt/app/apps/block_scout_web'
     ports:
       - "4000:4000"
   blockscout-redis:
